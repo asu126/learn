@@ -68,7 +68,7 @@ bundle exec foreman start
 
 ```
 cd gitlab && bundle exec rake db:create dev:setup
-
+bin/rake db:migrate RAILS_ENV=development
 注意：如果你是和他人共用开发机器，请修改端口号以免冲突，（默认端口是3000）自定义端口：
 
 ```
