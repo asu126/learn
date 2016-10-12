@@ -1,0 +1,5 @@
+CREATE admin
+  CREATE USER "username" WITH PASSWORD 'password' WITH ALL PRIVILEGES
+
+CREATE admin
+  CREATE USER "username" WITH PASSWORD 'password'
