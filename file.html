@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+function showFilename() 
+{
+	// ArrayBuffer 对象与ArrryBufferView 对象
+	var buffer = new ArrayBuffer(32); // 32 byte
+	// 利用 ArrryBufferView 读写ArrayBuffer 对象
+	
+	var array = new Int32Array(buffer);
+	array[0] = 666;
+	console.log(array[0]);
+	console.log(array[1]);
+	// 看看溢出回返回什么
+	console.log(array[4]);
+	array[5] = 666;
+	console.log(array[5]);
+	
+	var file = document.getElementById("file").files[0];
+	alert(file.name);
+	console.log(file.size);
+	console.log(file.type);
+}
+</script>
+</head>
+<body>
+	<h1>从1到给定数值的求和示例</h1>
+		输入数值:<input type="file" id="file" size="80">
+	<button onclick="showFilename()">上传</button>
+</body>
+</html>

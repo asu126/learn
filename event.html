@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+function calculate() 
+{
+    var num = parseInt(document.getElementById("num").value, 10);
+    var result = 0;
+    //循环计算求和
+    for (var i = 0; i <= num; i++) 
+    {
+      result += i;
+    }
+    alert("合计值为" + result + "。");
+}
+</script>
+</head>
+<body>
+	<h1>从1到给定数值的求和示例</h1>
+	输入数值:<input type="text" id="num">
+	<button onclick="calculate()">计算</button>
+	
+	<button id="mybutton"> click me </button>
+
+	<script type="text/javascript">
+	// 利用两种方法添加click 事件,将js 放到这里是因为放到前面的时候 b 元素还未加载，为null，添加事件报错
+	var b = document.getElementById("mybutton");
+	console.log(b)
+	b.onclick = function() { alert("THanks click me!"); };
+	b.addEventListener("click", function() { alert("THanks click me again!"); } );
+	</script>
+</body>
+</html>
