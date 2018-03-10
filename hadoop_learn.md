@@ -21,6 +21,7 @@
     - sudo chown -R root:root /usr/lib/jvm/jdk1.8.0_144
     - sudo update-alternatives --config java
 ``` 
+- https://www.cnblogs.com/a2211009/p/4265225.html
 
 ```
 JobConf conf = new JobConf(new Configuration()); 
